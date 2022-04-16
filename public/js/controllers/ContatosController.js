@@ -1,5 +1,5 @@
 angular.module('ifsp').controller('ContatosController',
-    function($resource, $scope) {
+    function(Contato, $scope) {
         $scope.contatos = [];
         $scope.filtro = '';
         $scope.mensagem = { texto: '' };

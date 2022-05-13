@@ -13,7 +13,8 @@
         "ejs": "^0.8.8",
         "express": "4.8",
         "express-load": "^1.1.16",
-        "method-override": "^2.3.10"
+        "method-override": "^2.3.10",
+        "mongoose": "^6.3.3"
     },
     "engines": {
         "node": "12.x"

@@ -1,6 +1,9 @@
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var passport = require('passport')
+var passport = require('passport');
+var express = require ('express');
+var bodyParser = require('body-parser'); 
+var load = require('express-load');
 
 module.exports = function () {
     //Instância do Express
@@ -8,7 +11,7 @@ module.exports = function () {
 
     //Porta da aplicação	
     //app.set('port', 5000);
-    app.set('port', process.env.PORT || 5000);
+    app.set('port', process.env.PORT || 3000);
 
     app.use(cookieParser())
     app.use(session(
@@ -32,7 +35,10 @@ module.exports = function () {
     app.set('views', './app/views');
 
     //Carregar pastas
-    load('models', { cwd: 'app' }).then('controllers').then('routes').into(app);
+    load('models', { cwd: 'app' })
+    .then('controllers')
+    .then('routes/auth.js')
+    .then('routes').into(app);
 
     return app;
 };

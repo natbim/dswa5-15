@@ -15,6 +15,7 @@
         "express": "4.8",
         "express-load": "1.1",
         "express-session": "1.7",
+        "grunt-contrib-copy": "^0.7.0",
         "helmet": "^0.4.2",
         "method-override": "^2.3.10",
         "mongo-sanitize": "1.0",
@@ -26,5 +27,8 @@
     },
     "engines": {
         "node": "12.x"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5"
     }
 }
